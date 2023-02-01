@@ -38,7 +38,7 @@ To change this template use File | Settings | File Templates.
     System.out.println(obj);
     int total = obj2.get("list_total_count").getAsInt();
 
-    for (int i = 1; i <= 30; i++) {
+    for (int i = 1; i <= total; i++) {
         req = new Request.Builder().url("http://openapi.seoul.go.kr:8088/5a6e526a5468656e39367259416c58/json/TbPublicWifiInfo/" + i + "/" + i + "/").get().build();
         res = client.newCall(req).execute();
         json = res.body().string();
